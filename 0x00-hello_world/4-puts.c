@@ -7,7 +7,7 @@
  */
 int main(void)
 {
-	const char *text = "\"programming is like building a multilingual puzzle";
+	const char *text = "\"programming is like building a multilingual puzzle\n";
 
 	puts(text);
 	return (0);
