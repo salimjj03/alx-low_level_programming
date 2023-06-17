@@ -1,6 +1,5 @@
 #include <stdio.h>
 
-/* betty style doc for function main goes there */
 /**
  * main - Entry point
  *
@@ -8,12 +7,15 @@
  */
 int main(void)
 {
-	int alpha = 'a';
+	int a;
 
-	while (alpha <= 'z')
+	for (a = 'a'; a <= 'z'; a++)
 	{
-		putchar(alpha);
-		alpha++;
+		putchar(a);
+	}
+	for (a = 'A'; a <= 'Z'; a++)
+	{
+		putchar(a);
 	}
 		putchar('\n');
 		return (0);
