@@ -3,7 +3,7 @@
 /**
  * _strcat - return concatenated string
  * @dest: first string
- * @src second string
+ * @src: second string
  * Return: dest
  */
 
