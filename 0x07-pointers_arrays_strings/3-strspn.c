@@ -11,14 +11,19 @@ unsigned int _strspn(char *s, char *accept)
 {
 	unsigned int j, i, sum = 0;
 
-	for (i = 0; accept[i] != '\0'; i++)
+	for (i = 0; s[i] != '\0'; i++)
 	{
-	for (j = 0; s[j] != ','; j++)
+	for (j = 0; accept[j] != '\0'; j++)
 	{
-	if (accept[i] == s[j])
+	if (s[i] == accept[j])
 	{
-		sum = sum + 1;
+		sum++;
+		break;
 	}
+	}
+	if (j == '\0')
+	{
+		break;
 	}
 	}
 		return (sum);
