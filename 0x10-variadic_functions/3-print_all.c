@@ -75,13 +75,11 @@ void print_all(const char * const format, ...)
 	while (format[x] != '\0')
 	{
 	y = 0;
-	while (y < 4)
+	while (y < 5)
 	{
 	if (format[x] == value[y].fmt)
 	{
 		value[y].ptr(argc);
-	if (format[x + 1] != '\0')
-		printf(", ");
 	}
 		y++;
 	}
