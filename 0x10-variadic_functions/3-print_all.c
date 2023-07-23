@@ -55,37 +55,38 @@ void s(va_list argc)
 }
 
 /**
- * print_all - ..
+ * print_all - ...
  * @format: ...
- * Return:...
+ * Return: ..
  */
 
 void print_all(const char * const format, ...)
 {
 	va_list argc;
 	int x, y;
-	char fmt[] = "icfs";
-
-	void (*ptr[])(va_list argc) = {i, c, f, s};
-
+	_p value[] = {
+		{'i', i},
+		{'c', c},
+		{'f', f},
+		{'s', s}
+	};
 	va_start(argc, format);
 	x = 0;
 	while (format[x] != '\0')
 	{
 	y = 0;
-	while (fmt[y] != '\0')
+	while (y < 4)
 	{
-	if (format[x] == fmt[y])
+	if (format[x] == value[y].fmt)
 	{
-		ptr[y](argc);
+		value[y].ptr(argc);
 	if (format[x + 1] != '\0')
-	{
 		printf(", ");
-	}
 	}
 		y++;
 	}
 		x++;
 	}
+		va_end(argc);
 		printf("\n");
 }
