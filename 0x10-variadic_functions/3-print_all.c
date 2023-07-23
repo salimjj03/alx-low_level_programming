@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #include "variadic_functions.h"
 #include <stdio.h>
 #include <stdarg.h>
@@ -43,11 +44,14 @@ void f(va_list argc)
 
 void s(va_list argc)
 {
-if (argc == NULL)
-{
-	printf("(nil)");
-}
-	printf("%s", va_arg(argc, char*));
+	char *arg = va_arg(argc, char *);
+
+	if (arg == NULL)
+	{
+		printf("(nil)");
+		return;
+	}
+	printf("%s", arg);
 }
 
 /**
