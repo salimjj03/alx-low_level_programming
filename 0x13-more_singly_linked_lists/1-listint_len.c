@@ -13,11 +13,10 @@ size_t listint_len(const listint_t *h)
 	const listint_t *tmp;
 
 	tmp = h;
-	while (tmp->next != 0)
+	while (tmp != 0)
 	{
 		tmp = tmp->next;
 		n_node++;
 	}
-		n_node++;
 		return (n_node);
 }
